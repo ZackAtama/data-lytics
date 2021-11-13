@@ -9,12 +9,14 @@ import './App.css'
 
 // component imports
 import Header from './layouts/Header'
+import Dashboard from './views/Dashboard'
 import Footer from './layouts/Footer'
 
 function App() {
 	return (
 		<div className="App">
 			<Header/>
+			<Dashboard/>
 			<Footer/>
 		{/* <Grid container style={{ padding: '0px 10%' }}>
 			<Grid item sx={12} sm={12} md={12} lg={12} lx={12}>

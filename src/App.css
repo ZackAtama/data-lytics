@@ -23,8 +23,8 @@
 	--canvas-black-light-1: #000000a0;
 	--canvas-black-light-2: #00000074;
 
-	--primary-font-family: 'Roboto Condensed', sans-serif;
-	--secondary-font-family: 'Nunito', sans-serif;
+	--primary-font-family: 'Roboto', sans-serif;
+	--secondary-font-family: 'Roboto Condensed', sans-serif;
 
 	--inactive-color: #AAAAAA;
 
@@ -33,7 +33,7 @@
 	--black-color-light-1: #000000a0;
 	--black-color-light-2: #00000080;
 
-    --primary-color-boxshadow: 0px 0px 10px var(--primary-color);
+    --primary-color-boxshadow: 0px 0px 4px var(--primary-color);
     --primary-color-boxshadow-light-0: 0px 0px 10px var(--primary-color-light-2);
     --primary-color-boxshadow-light-1: 0px 0px 10px var(--primary-color-light-3);
     --primary-color-boxshadow-light-2: 0px 0px 10px var(--primary-color-light-4);
