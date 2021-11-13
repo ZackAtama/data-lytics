@@ -1,3 +1,47 @@
+:root {
+
+	--primary-color: #009688;
+	--primary-color-light-0: #009687c1;
+	--primary-color-light-1: #00968774;
+	--primary-color-light-2: #0096873f;
+
+	--secondary-color: #F8ED3C;
+	--secondary-color-light-0: #f8ec3cd5;
+	--secondary-color-light-1: #f8ec3cb4;
+	--secondary-color-light-2: #f8ec3c91;
+	--secondary-color-light-3: #f8ec3c5f;
+	--secondary-color-light-4: #f8ec3c31;
+
+	--canvas-white: #ffffff;
+	--canvas-white-light-0: #ffffffd9;
+	--canvas-white-light-1: #ffffffb3;
+	--canvas-white-light-2: #ffffff76;
+
+	
+	--canvas-black: #000000;
+	--canvas-black-light-0: #000000cf;
+	--canvas-black-light-1: #000000a0;
+	--canvas-black-light-2: #00000074;
+
+	--primary-font-family: 'Roboto Condensed', sans-serif;
+	--secondary-font-family: 'Nunito', sans-serif;
+
+	--inactive-color: #AAAAAA;
+
+	--black-color: #000000;
+	--black-color-light-0: #000000d4;
+	--black-color-light-1: #000000a0;
+	--black-color-light-2: #00000080;
+
+    --primary-color-boxshadow: 0px 0px 10px var(--primary-color);
+    --primary-color-boxshadow-light-0: 0px 0px 10px var(--primary-color-light-2);
+    --primary-color-boxshadow-light-1: 0px 0px 10px var(--primary-color-light-3);
+    --primary-color-boxshadow-light-2: 0px 0px 10px var(--primary-color-light-4);
+
+    --secondary-color-boxshadow: 0px 0px 10px var(--secondary-color);
+    --secondary-color-boxshadow-light-0: 0px 0px 5px var(--secondary-color-light-2);
+}
+
 .App {
   text-align: center;
 }

@@ -1,23 +1,28 @@
-import logo_lg from './logo.svg';
-import './App.css';
+
+import {
+	Grid,
+	Typography
+} from '@mui/material'
+
+// style imports
+import './App.css'
+
+// component imports
+import Header from './layouts/Header'
+import Footer from './layouts/Footer'
 
 function App() {
 	return (
 		<div className="App">
-			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				<p>
-				Edit <code>src/App.js</code> and save to reload.
-				</p>
-				<a
-				className="App-link"
-				href="https://reactjs.org"
-				target="_blank"
-				rel="noopener noreferrer"
-				>
-				Learn React
-				</a>
-			</header>
+			<Header/>
+			<Footer/>
+		{/* <Grid container style={{ padding: '0px 10%' }}>
+			<Grid item sx={12} sm={12} md={12} lg={12} lx={12}>
+				<Typography style={{ padding: '10px 0px', borderBottom: '1px #009688 solid' }} align='left'>
+					<img src={logo_lg} style={{ width: '250px' }}/>
+				</Typography>
+			</Grid>
+		</Grid> */}
 		</div>
 	);
 }
