@@ -33,7 +33,7 @@
 	--black-color-light-1: #000000a0;
 	--black-color-light-2: #00000080;
 
-    --primary-color-boxshadow: 0px 0px 4px var(--primary-color);
+    --primary-color-boxshadow: 0px 0px 5px var(--primary-color-light-1);
     --primary-color-boxshadow-light-0: 0px 0px 10px var(--primary-color-light-2);
     --primary-color-boxshadow-light-1: 0px 0px 10px var(--primary-color-light-3);
     --primary-color-boxshadow-light-2: 0px 0px 10px var(--primary-color-light-4);

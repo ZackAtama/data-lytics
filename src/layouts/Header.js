@@ -186,6 +186,7 @@ const Header = () => {
             <AppBar
                 position="fixed"
                 style={{
+                    height: '120px',
                     padding: '10px 4%',
                     backgroundImage: `url(${headerBg})`,                    
                     backgroundRepeat: 'repeat',
@@ -249,7 +250,7 @@ const Header = () => {
                             }}
                             align='center'
                         >
-                            <AccountBoxOutlinedIcon  style={{ fontSize: '1.6em' }}/>
+                            <AccountBoxOutlinedIcon  style={{ fontSize: '2em' }}/>
                             <p style={{ margin: '0px', fontSize: '10px' }}>Account</p>
                         </IconButton>
                     </Box>

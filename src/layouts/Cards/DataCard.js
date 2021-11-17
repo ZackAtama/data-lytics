@@ -13,7 +13,9 @@ import {
 // image imports
 import confirmed from '../../assets/icons/confirmed.png'
 
-const DataCard = () => {
+const DataCard = (props) => {
+
+    const { data } = props
 
     return (
         <Grid
@@ -29,16 +31,16 @@ const DataCard = () => {
             align='center'
         >
             <Typography>
-                <img src={confirmed} style={{ width: '25%' }}/>
+                <img src={data.icon} style={{ width: '25%' }}/>
             </Typography>
             <Typography variant='h4' style={{ fontWeight: '300' }}>
-                Confirmed
+                {data.name}
             </Typography>
             <Typography variant='h5' style={{ fontFamily: 'var(--secondary-font-family)', fontWeight: '700', color: '#448AFF' }}>
-                234,000
+                {data.numbers}
             </Typography>
             <Typography style={{ fontWeight: '300', color: '#555' }}>
-                <strong style={{ color: 'var(--primary-color)' }}>13%</strong> of world cases
+                <strong style={{ color: 'var(--primary-color)' }}>{data.percentage}%</strong> of world cases
             </Typography>
         </Grid>
     )
