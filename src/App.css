@@ -2,8 +2,8 @@
 
 	--primary-color: #009688;
 	--primary-color-light-0: #009687c1;
-	--primary-color-light-1: #00968774;
-	--primary-color-light-2: #0096873f;
+	--primary-color-light-1: #00968758;
+	--primary-color-light-2: #0096872c;
 
 	--secondary-color: #F8ED3C;
 	--secondary-color-light-0: #f8ec3cd5;
@@ -33,7 +33,7 @@
 	--black-color-light-1: #000000a0;
 	--black-color-light-2: #00000080;
 
-    --primary-color-boxshadow: 0px 0px 5px var(--primary-color-light-1);
+    --primary-color-boxshadow: 0px 0px 5px var(--primary-color-light-2);
     --primary-color-boxshadow-light-0: 0px 0px 10px var(--primary-color-light-2);
     --primary-color-boxshadow-light-1: 0px 0px 10px var(--primary-color-light-3);
     --primary-color-boxshadow-light-2: 0px 0px 10px var(--primary-color-light-4);

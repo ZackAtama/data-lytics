@@ -1,23 +1,17 @@
 import * as React from 'react'
-import { NavLink, useLocation } from 'react-dom'
-import { styled, alpha } from '@mui/material/styles'
+import { NavLink } from 'react-dom'
 import {
     AppBar,
     Box,
     Toolbar,
     IconButton,
-    Link,
     Button,
-    Typography,
-    InputBase,
     Badge,
     MenuItem,
     Menu
 } from '@mui/material'
 import AppsIcon from '@mui/icons-material/Apps'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded'
-import MenuIcon from '@mui/icons-material/Menu'
-import SearchIcon from '@mui/icons-material/Search'
 import AccountCircle from '@mui/icons-material/AccountCircle'
 import MailIcon from '@mui/icons-material/Mail'
 import NotificationsIcon from '@mui/icons-material/Notifications'
@@ -28,54 +22,8 @@ import headerBg from '../assets/header_bg.png'
 import logoLg from '../assets/logo_lg_beta.png'
 import logoSm from '../assets/logo_sm_beta.png'
 
-// style imports
-import {
-    HeaderLinks
-} from '../components/Styles/HeaderStyles'
-
-
-const Search = styled('div')(({ theme }) => ({
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: alpha(theme.palette.common.white, 0.15),
-    '&:hover': {
-        backgroundColor: alpha(theme.palette.common.white, 0.25),
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing(3),
-        width: 'auto',
-    },
-}))
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-}))
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-    color: 'inherit',
-    '& .MuiInputBase-input': {
-        padding: theme.spacing(1, 1, 1, 0),
-        paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-        transition: theme.transitions.create('width'),
-        width: '100%',
-        [theme.breakpoints.up('md')]: {
-        width: '20ch',
-        },
-    },
-}))
-
 const Header = () => {
 
-    const LinkClasses = HeaderLinks()
 
     const [anchorEl, setAnchorEl] = React.useState(null)
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null)
@@ -186,15 +134,19 @@ const Header = () => {
             <AppBar
                 position="fixed"
                 style={{
-                    height: '120px',
-                    padding: '10px 4%',
                     backgroundImage: `url(${headerBg})`,                    
                     backgroundRepeat: 'repeat',
                     borderBottom: '1px #009688 solid',
                     boxShadow: 'none'
                 }}
             >
-                <Toolbar container>
+                <Toolbar
+                    container
+                    style={{
+                        maxHeight: '120px',
+                        padding: '5px 5.5%',
+                    }}
+                >
                     <Button
                         sx={{ display: { xs: 'none', lg: 'flex' } }}
                         to={'/'}
@@ -205,7 +157,7 @@ const Header = () => {
                             borderRadius: '8px'
                         }}
                     >                        
-                        <img src={logoLg} style={{ width: '100%' }}/>
+                        <img src={logoLg} alt='' style={{ width: '100%' }}/>
                     </Button>
                     <Button
                         sx={{ display: { md: 'flex', lg: 'none' } }}
@@ -217,7 +169,7 @@ const Header = () => {
                             borderRadius: '8px'
                         }}
                     >                        
-                        <img src={logoSm} style={{ width: '100%' }}/>
+                        <img src={logoSm} alt='' style={{ width: '100%' }}/>
                     </Button>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', lg: 'flex' } }} style={{ color: '#009688' }}>
