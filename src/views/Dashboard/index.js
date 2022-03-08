@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useEffect, useState, useContext } from 'react'
 import {
     Grid,
     Typography,
@@ -17,11 +17,30 @@ import CountryDataCard from '../../layouts/Cards/CountryDataCard'
 
 const Dashboard = () => {
 
-    const { covidData, EACovidData } = useContext(AppContext)
+    const { covidData, BarGraphData } = useContext(AppContext)
 
-    const data = covidData.map(item=>(
-        { cases: item.name, population: item.numbers/10000 }
-    ))    
+    const [isLoaded, setIsLoaded] = useState(false)
+    const [donutData, setDonutData] = useState([])
+    const [barGraphData, setBarGraphData] = useState({
+        confirmed: 0,
+        active: 0,
+        recovered: 0,
+        deaths: 0
+    })
+
+    useEffect(() => {
+        setIsLoaded(false)
+        const getDonutData = async () => {
+            setDonutData(await covidData.map(item=>({ cases: item.name, population: item.numbers/10000 })))
+        }
+        const getBargraphData = async () => {
+            setBarGraphData(await BarGraphData)
+        }
+        getDonutData();
+        getBargraphData();
+        setIsLoaded(true);
+        // eslint-disable-next-line
+    }, [isLoaded, donutData, barGraphData])
 
     return (
         <Grid container spacing={2} style={{ padding: '120px 5.8%', paddingTop: '150px' }}>
@@ -32,12 +51,14 @@ const Dashboard = () => {
                     style={{
                     }}
                 >
-                    {covidData.map((cardData, index)=>(
-                        <DataCard
-                            key={index}
-                            Details={cardData}
-                        />
-                    ))}
+                    {isLoaded?
+                        covidData.map((cardData, index)=>(
+                            <DataCard
+                                key={index}
+                                Details={cardData}
+                            />
+                        ))
+                    : <Typography variant={"h6"}>Loading Data...</Typography> }
                 </Grid>
                 <Grid
                     container
@@ -51,10 +72,10 @@ const Dashboard = () => {
                     }}
                 >
                     <Grid item xs={12} sm={12} md={12} lg={9} xl={9} style={{ padding: '1%' }}>
-                        <MultiBargraph data={EACovidData}/>
+                        {/* {isLoaded?<MultiBargraph data={barGraphData}/>:"Loading Bargraph Data...."} */}
                     </Grid>
                     <Grid item xs={12} sm={12} md={6} lg={3} xl={3} style={{ padding: '1%' }}>
-                        <Donutgraph data={data}/>
+                        {/* {isLoaded?<Donutgraph data={donutData}/>:<Typography variant={"h6"}>Loading Data...</Typography>} */}
                     </Grid>
                 </Grid>
             </Grid>
@@ -77,12 +98,14 @@ const Dashboard = () => {
                     <Grid
                         container
                     >
-                        {EACovidData.map((countryData, index)=>(
-                            <CountryDataCard
-                                key={index}                            
-                                Details={countryData}
-                            />
-                        ))}
+                        {/* {isLoaded?
+                            barGraphData.map((countryData, index)=>(
+                                <CountryDataCard
+                                    key={index}                            
+                                    Details={countryData}
+                                />
+                            ))
+                        : "Loading Bargraph Data...." } */}
                     </Grid>
                 </Grid>
             </Grid>

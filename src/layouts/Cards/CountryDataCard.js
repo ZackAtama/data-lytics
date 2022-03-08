@@ -53,8 +53,8 @@ const CountryDataCard = (props) => {
                 <Grid item xs={6} sm={6} md={6} lg={3} xl={3}>
                     <Typography style={{ fontFamily: 'var(--primary-font-family)', fontWeight: '400', paddingTop: '15px', fontSize: '14px' }}>
                         <img src={vaccinated} alt='' style={{ float: 'left', width: '45px', marginRight: '2px', marginTop: '-5px' }}/>
-                        <span style={{ color: '#e040fb' }}>{new Intl.NumberFormat().format(Details.vaccinated)}</span><br/>
-                        Vaccinated
+                        <span style={{ color: '#e040fb' }}>{new Intl.NumberFormat().format(Details.deaths)}</span><br/>
+                        Deaths
                     </Typography>
                 </Grid>
             </Grid>
